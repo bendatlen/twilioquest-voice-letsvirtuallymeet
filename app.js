@@ -1,9 +1,10 @@
+require('dotenv').config()
 const express = require('express');
 const VoiceResponse = require('twilio').twiml.VoiceResponse;
 const urlencoded = require('body-parser').urlencoded;
 
 // Update with your own phone number in E.164 format
-const MODERATOR = '+447769641523';
+const MODERATOR = process.env.MODERATOR;
 
 const app = express();
 
